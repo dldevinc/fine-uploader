@@ -885,9 +885,9 @@
             }
             var i = -1;
             do {
-                bytes = bytes / 1000;
+                bytes = bytes / 1024;
                 i++;
-            } while (bytes > 999);
+            } while (bytes > 1023);
 
             return Math.max(bytes, 0.1).toFixed(1) + this._options.text.sizeSymbols[i];
         },
