@@ -153,7 +153,7 @@
             text: {
                 defaultResponseError: "Upload failure reason unknown",
                 fileInputTitle: "file input",
-                sizeSymbols: ["kB", "MB", "GB", "TB", "PB", "EB"]
+                sizeSymbols: ["KB", "MB", "GB", "TB", "PB", "EB"]
             },
 
             deleteFile: {
