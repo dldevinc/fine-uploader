@@ -1348,7 +1348,7 @@
             if (status === qq.status.UPLOAD_SUCCESSFUL) {
                 this._succeededSinceLastAllComplete.push(id);
             }
-            else if ((status === qq.status.UPLOAD_FAILED) || (status === qq.status.REJECTED)) {
+            else if ((status === qq.status.UPLOAD_FAILED) || (status === qq.status.REJECTED) || (status === qq.status.CANCELED)) {
                 this._failedSinceLastAllComplete.push(id);
             }
 
