@@ -1356,7 +1356,9 @@
                 (this._succeededSinceLastAllComplete.length || this._failedSinceLastAllComplete.length)) {
                 // Attempt to ensure onAllComplete is not invoked before other callbacks, such as onCancel & onComplete
                 setTimeout(function() {
-                    self._onAllComplete(self._succeededSinceLastAllComplete, self._failedSinceLastAllComplete);
+                    if (self._succeededSinceLastAllComplete.length || self._failedSinceLastAllComplete.length) {
+                        self._onAllComplete(self._succeededSinceLastAllComplete, self._failedSinceLastAllComplete);
+                    }
                 }, 0);
             }
         },
